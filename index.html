@@ -29,34 +29,117 @@
 <body>
     <!-- Header Section -->
     <header>
-        <nav>
-            <!-- Navigation links will be added here -->
-        </nav>
+       <div id="Name">
+         <h1>Anas naaman </h1>
+        </div>
+<div id="links">
+  <nav>
+    <a href="https://github.com/anasn77" target="_blank">
+      <i class="fab fa-github"></i><span>GitHub</span> 
+    </a>
+    <a href="https://www.linkedin.com/me?trk=p_mwlite_feed-secondary_nav" target="_blank">
+      <i class="fab fa-linkedin"></i><span> LinkedIn</span>
+    </a>
+    <a href="mailto:anasnaaman4@gmail.com" class="email-link">
+      <i class="fas fa-envelope"></i> <span>Email</span>
+    </a>
+  </nav>
+</div>
     </header>
 
     <!-- Main Content -->
     <main>
         <!-- Hero Section -->
         <section id="home" class="hero-section">
+           <div id="paragraph">
+            <h1> Hi, I'm Anas 👋</h1>
+              <p> Computer Science graduate with strong programming skills in C, Python, php, and full-stack development, specializing
+               in system-level applications, AI, and database management. Passionate about problem-solving, optimization, and
+               building efficient software solution.
+               </p>
+            </div>
+             <div id="profile"><img src="images/anaspf.jpg" alt="a"></div>
+             <div id="buttons">
+             <button>skills</button>
+             <button>testimony</button>
+             <button>contact</button></div>
             <!-- Hero content will be added here -->
         </section>
 
         <!-- Skills Section -->
         <section id="skills" class="skills-section">
+           <h1> My Skills</h3>
+
+           <p>I have strong skills in HTML5, CSS3, and JavaScript, with hands-on experience in React,
+             Next.js, and Tailwind CSS for building modern, responsive web applications. I also have working knowledge of MySQL
+            , PHP, and Python, along with version control using Git and GitHub, and I develop primarily using VS Code.</p>
+            <div id="skills-container" class="skills-grid"></div>
             <!-- Skills content will be dynamically added -->
         </section>
 
         <!-- Projects Section -->
         <section id="projects" class="projects-section">
+           <h1>My projects</h1>
+           <p>Here are some of my recent projects that showcase my skills and experience.</p>
+            <div id="projects-container" class="projects-grid"></div>
             <!-- Projects will be dynamically added -->
         </section>
+        <!--testimony section-->
+        <section id="testimonials" class="testimonials-section">
+         <h2>What People Say</h2>
+        <div id="testimonials-container" class="testimonials-container">
+    <!-- Testimonials will be added dynamically -->
+        </div>
+          </section>
+<div class="title">
+        <h1>Let's Connect</h1>
+        <p>Ready to bring your ideas to life?</p> 
+      </div>
 
         <!-- Contact Section -->
-        <section id="contact" class="contact-section">
-            <form id="contact-form">
-                <!-- Contact form will be added here -->
-            </form>
-        </section>
+        <section class="contact-container">
+    <div class="contact-info">
+      
+       <h1>Get inTouch</h1>
+        <p>Feel free to reach out to me for any inquiries, collaborations, or opportunities. Whether you have a project in mind, need assistance, or just want to connect, I'd be happy to hear from you. Fill out the form and I'll get back to you as soon as possible.</p>
+        <h1>Contact Info</h1>
+        <div class="info-box">
+            <div class="icon email-icon">📧</div>
+            <div class="info-text">
+                <p class="label">EMAIL</p>
+                <p class="value">anasnaaman4@gmail.com</p>
+            </div>
+        </div>
+        <div class="info-box">  
+            <div class="icon phone-icon">📞</div>
+            <div class="info-text">
+                <p class="label">PHONE</p>
+                <p class="value">+961 71 001 807</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="message-form " >
+        <div class="form-header">
+            <div class="header-icon">📧</div>
+            <h2>Send Message</h2>
+            <p>I'll respond within 24 hours</p>
+        </div>
+
+        <form>
+            <label for="name">Full Name <span>*</span></label>
+            <input type="text" id="name" placeholder="Enter your full name" required>
+
+            <label for="email">Email Address <span>*</span></label>
+            <input type="email" id="email" placeholder="Enter your email address" required>
+
+            <label for="message">Message <span>*</span></label>
+            <textarea id="message" placeholder="Tell me about your project or inquiry..." required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+</section>
     </main>
 
     <!-- Custom JavaScript -->
