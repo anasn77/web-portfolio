@@ -135,10 +135,20 @@ if (testimonialsContainer) {
     testimonialsContainer.appendChild(card);
   });
 }
-const messageInput = document.querySelector("#message");
-function validateMessage() {
-    const message = messageInput.value.trim();
-}
+document.addEventListener("DOMContentLoaded", () => {
+  const buttons = document.querySelectorAll("#buttons button");
+
+  buttons.forEach(button => {
+    button.addEventListener("click", () => {
+      const targetId = button.getAttribute("data-target");
+      const target = document.getElementById(targetId);
+
+      if (target) {
+        target.scrollIntoView({ behavior: "smooth" });
+      }
+    });
+  });
+});
 // Initialize phone input
 const phoneInput = document.querySelector("#phone");
 if (phoneInput) {
