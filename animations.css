@@ -15,12 +15,12 @@
 .hero-section #paragraph,
 .hero-section #buttons {
   opacity: 0;
-  transform: translateX(50px);
+  transform: translateX(-50px);
   transition: all 0.8s ease-out;
 }
 .hero-section #profile img {
   opacity: 0;
-  transform: translateY(50px);
+  transform: translateY(-50px);
   transition: all 1s ease-out;
 }
 
