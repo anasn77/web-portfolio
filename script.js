@@ -3,6 +3,44 @@ document.addEventListener('DOMContentLoaded', function() {
     // Replace with your EmailJS public key
     emailjs.init("w1UlfnF_A2RNvJuRh");
 });
+const form = document.querySelector("#contact-form");
+const errorDiv = document.getElementById("form-error");
+
+form.addEventListener("submit", function(event){
+   event.preventDefault(); 
+
+   const name = document.getElementById("name").value;
+   const email = document.getElementById("email").value;
+   const message = document.getElementById("message").value;
+
+   // Clear previous error
+   errorDiv.textContent = "";
+
+   // Validation
+   if(name === "" || email === "" || message === ""){
+       errorDiv.textContent = "Please fill in all fields.";
+       return;
+   }
+
+   if(!email.includes("@")){
+       errorDiv.textContent = "Please enter a valid email address.";
+       return;
+   }
+
+   // Send email
+   emailjs.sendForm("service_0hmsmxm","template_pskt7en",this,"w1UlfnF_A2RNvJuRh")
+       .then(() => {
+           errorDiv.style.color = "green"; // show success in green
+           errorDiv.textContent = "✅ Message sent successfully!";
+           form.reset();
+       })
+       .catch((error) => {
+           errorDiv.style.color = "red";
+           errorDiv.textContent = "❌ Failed to send message. Please try again.";
+           console.error("EmailJS error:", error);
+       });
+});
+
 
 // Skills Data
 const skillsData = [
