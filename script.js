@@ -1,8 +1,8 @@
 // Initialize EmailJS
-document.addEventListener('DOMContentLoaded', function() {
-    // Replace with your EmailJS public key
-    emailjs.init("w1UlfnF_A2RNvJuRh");
-});
+   document.addEventListener('DOMContentLoaded', function() {
+        //Replace with your EmailJS public key
+       emailjs.init("w1UlfnF_A2RNvJuRh");
+   });
 const form = document.querySelector("#contact-form");
 const errorDiv = document.getElementById("form-error");
 
@@ -38,6 +38,9 @@ form.addEventListener("submit", function(event){
            errorDiv.style.color = "red";
            errorDiv.textContent = "❌ Failed to send message. Please try again.";
            console.error("EmailJS error:", error);
+           if (error.text) {
+               console.error("Error details:", error.text);
+           }
        });
 });
 
@@ -107,8 +110,28 @@ const projectsData = [
         tags: ["HTML", "CSS", "JavaScript","php"],
         links: {
             github: "https://github.com/anasn77/Hotel-Managment.git",
-            demo: "https://demo-link.com"
+            demo: " https://anasn77.github.io/hotel-frontend/"
         }
+    },
+    {
+      title:"Weather App",
+      image:"images/weatherimage.webp",
+      description:"we ather application that provides real-time weather information for any location. Built with HTML, CSS, and JavaScript, it utilizes the OpenWeatherMap API to fetch and display current weather conditions, forecasts, and other relevant data in a user-friendly interface.",
+      tags:["HTML","CSS","React.js"],
+      links:{
+        github:"https://github.com/anasn77/whetherappProject.git",
+        demo:"https://anasn77.github.io/whetherappProject/"
+      }
+    },
+    {
+      title:"todolist app",
+      image:"images/todoimage.png",
+      description:"A simple and intuitive to-do list application built with HTML, CSS, and JavaScript. It allows users to add, edit, and delete tasks, as well as mark them as completed. The app also features local storage functionality to save tasks between sessions.",
+      tags:["HTML","CSS","JavaScript"],
+      links:{
+        github:"https://github.com/anasn77/toDoList.git",
+        demo:"https://anasn77.github.io/toDoList/"
+      }
     }
     // Add more projects as needed
 ];
@@ -140,39 +163,7 @@ if (projectsContainer) {
     projectsContainer.appendChild(projectCard);
   });
 }
-//TESTIMONIALS DATA 
-const testimonialsData = [
-  {
-    name: "Jane Smith",
-    role: "Client",
-    photo: "images/testimony-headshot.webp",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
-  }
-  // Add more testimonials as needed
-];
 
-// Display Testimonials 
-const testimonialsContainer = document.getElementById("testimonials-container");
-
-if (testimonialsContainer) {
-  testimonialsData.forEach(testimonial => {
-    const card = document.createElement("div");
-    card.classList.add("testimonial-card");
-
-    card.innerHTML = `
-      <p class="testimonial-text">"${testimonial.text}"</p>
-      <div class="testimonial-user">
-        <img src="${testimonial.photo}" alt="${testimonial.name}">
-        <div class="user-info">
-          <h3>${testimonial.name}</h3>
-          <p>${testimonial.role}</p>
-        </div>
-      </div>
-    `;
-
-    testimonialsContainer.appendChild(card);
-  });
-}
 document.addEventListener("DOMContentLoaded", () => {
   const buttons = document.querySelectorAll("#buttons button");
 
@@ -180,13 +171,13 @@ document.addEventListener("DOMContentLoaded", () => {
     button.addEventListener("click", () => {
       const targetId = button.getAttribute("data-target");
       const target = document.getElementById(targetId);
-
       if (target) {
         target.scrollIntoView({ behavior: "smooth" });
       }
     });
   });
 });
+
 // Initialize phone input
 const phoneInput = document.querySelector("#phone");
 if (phoneInput) {
@@ -254,7 +245,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Observe elements
   const elementsToAnimate = document.querySelectorAll(
-    "header, .hero-section, .skills-section, .projects-section, .testimonial-text, .contact-container, .title"
+    "header, .hero-section, .skills-section, .projects-section, .contact-container, .title"
   );
 
   elementsToAnimate.forEach(el => {
