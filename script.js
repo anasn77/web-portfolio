@@ -69,7 +69,7 @@ const skillsData = [
     },
     {
       name:"php",
-      image:"images/phpLOGO.PNG"
+      image:"images/phpLOGO.png"
     },
     {
       name:"MySQL",
